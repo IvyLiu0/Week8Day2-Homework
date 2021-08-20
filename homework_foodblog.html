@@ -78,8 +78,37 @@
             padding: 30px;
             width: 230px;
             border-radius:5%;
-            text-align: left
+            text-align: left;
+            /* z-index: 2; */
+            position: absolute;
         }
+
+        .modal1{
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+            width: 230px;
+            border-radius:5%;
+            text-align: left;
+            /* z-index: 2; */
+            position: absolute;
+            top: 25%;
+        }
+
+        .modal2{
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+            width: 230px;
+            border-radius:5%;
+            text-align: left;
+            /* z-index: 2; */
+            position: absolute;
+            top: 40%;
+        }
+        
 
         .foodie{
             font-size: small;
@@ -146,6 +175,7 @@
                         </div>
                     </div>
             </div>
+            
 
             <div class="post">
                 <img v-on:click="displayInfo1" v-bind:src="obj1.profile" alt="profile image" width="40px" height="30px">
@@ -174,7 +204,7 @@
             {{ obj2.date }}
             {{ obj2.reply }}
             <div v-html = "obj2.message"></div>
-            <div class="modal" v-show="obj2.isShowMyModal">
+            <div class="modal1" v-show="obj2.isShowMyModal">
                 <button class="close-button" type="button" v-on:click="obj2.isShowMyModal = false">X</button>
                 <h3>{{ obj2.author }}</h3>
                 <div class="modalInfo">
@@ -195,9 +225,9 @@
             {{ obj3.date }}
             {{ obj3.reply }}
             <div v-html = "obj3.message"></div>
-            <div class="modal" v-show="obj3.isShowMyModal">
+            <div class="modal2" v-show="obj3.isShowMyModal">
                 <button class="close-button" type="button" v-on:click="obj3.isShowMyModal = false">X</button>
-                <h3>{{ obj.author }}</h3>
+                <h3>{{ obj3.author }}</h3>
                 <div class="modalInfo">
                     <span class="foodie"><b>Foodie Level:&nbsp;</b></span><span class="modalDisc">{{ obj3.foodieLevel }}</span>
                     <br>
